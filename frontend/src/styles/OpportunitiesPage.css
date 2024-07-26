@@ -1,0 +1,50 @@
+/* OpportunitiesPage.css */
+
+.opportunities-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .opportunities-container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 15px;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 5px;
+  }
+  
+  span {
+    margin-right: 5px;
+  }
+  
