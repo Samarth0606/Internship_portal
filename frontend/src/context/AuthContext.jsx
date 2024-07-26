@@ -27,10 +27,11 @@ const AuthProvider = ({ children }) => {
       setAuthToken(localStorage.token);
     }
     try {
-      const res = await axios.get("/api/v1/auth");
+      const res = await axios.get("http://localhost:8080/api/v1/user/");
+      console.log(res , "resp")
       setAuthState((prevState) => ({
         ...prevState,
-        isAuthenticated: true,
+        isAuthenticated: true, 
         loading: false,
         user: res.data,
       }));
@@ -47,7 +48,7 @@ const AuthProvider = ({ children }) => {
 
   const register = async (formData) => {
     try {
-      const res = await axios.post("/api/v1/auth/register", formData);
+      const res = await axios.post("http://localhost:8080/api/v1/user/register", formData);
       setAuthState((prevState) => ({
         ...prevState,
         token: res.data.token,
@@ -66,7 +67,7 @@ const AuthProvider = ({ children }) => {
 
   const login = async (formData) => {
     try {
-      const res = await axios.post("/api/v1/auth/login", formData);
+      const res = await axios.post("http://localhost:8080/api/v1/user/login", formData);
       setAuthState((prevState) => ({
         ...prevState,
         token: res.data.token,

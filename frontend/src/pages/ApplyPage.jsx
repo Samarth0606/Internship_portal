@@ -19,7 +19,7 @@ const ApplyPage = () => {
 
   const applyForOpportunity = async () => {
     try {
-      await axios.post(`/api/v1/opportunity/apply/${id}`);
+      await axios.post(`http://localhost:8080/api/v1/opportunity/apply/${id}`);
       navigate('/opportunities');
     } catch (err) {
       console.error(err);

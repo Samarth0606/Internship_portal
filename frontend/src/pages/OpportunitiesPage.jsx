@@ -12,7 +12,7 @@ const OpportunitiesPage = () => {
 
   useEffect(() => {
     const fetchOpportunities = async () => {
-      const res = await axios.get('api/v1/opportunity/');
+      const res = await axios.get('http://localhost:8080/api/v1/opportunity/');
       setOpportunities(res.data);
     };
     fetchOpportunities();
@@ -25,13 +25,14 @@ const OpportunitiesPage = () => {
       <h1>Opportunities</h1>
       <ul>
         {opportunities.map((opportunity) => (
+          
           <li key={opportunity._id}>
             <h2>{opportunity.profileName}</h2>
             <p>{opportunity.companyName}</p>
             <p>{opportunity.stipend.salary} {opportunity.stipend.currency} {opportunity.stipend.salaryType}</p>
             <p>{opportunity.location.map((loc, index) => (
                 <span key={index}>
-                  {loc}
+                  {loc.string}
                   {index !== opportunity.location.length - 1 && ' | '}
                 </span>
               ))}
