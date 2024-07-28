@@ -6,5 +6,6 @@ const authMiddleware = require('../middleware');
 
 router.get('/', getOpportunities);
 router.post('/apply/:id', authMiddleware, applyForOpportunity);
+// router.get('/apply/isapplied/:id' , authMiddleware , alreadyApplyForOpportunity )
 
 module.exports = router;
